@@ -1,0 +1,11 @@
+framework module Verifone2CO {
+  umbrella header "Verifone2CO.h"
+
+  export *
+  module * { export * }
+}
+
+module Verifone2CO.Swift {
+  header "Verifone2CO-Swift.h"
+  requires objc
+}

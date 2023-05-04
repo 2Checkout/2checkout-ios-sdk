@@ -1,0 +1,28 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "38fb2fe5f047961e57f34611cc3c2db7af3cd582",
+  "iOS" : [
+    {
+      "swiftToolchainVersion" : "5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)",
+      "hash" : "ebc6eb3fb9af58e0c3890247f9802d2cd68a9cd83ce55afc815c12f1f334ab31",
+      "name" : "Verifone2CO",
+      "container" : "Verifone2CO.xcframework",
+      "identifier" : "ios-arm64"
+    },
+    {
+      "swiftToolchainVersion" : "5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)",
+      "hash" : "28f935f813800dc1f6c33eeac10bd131496810674452f3f0f1c24d33c3790700",
+      "name" : "Verifone2CO",
+      "container" : "Verifone2CO.xcframework",
+      "identifier" : "ios-arm64_x86_64-simulator"
+    }
+  ]
+}

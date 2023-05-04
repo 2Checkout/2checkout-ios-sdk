@@ -1,0 +1,114 @@
+[
+        {
+            "id": 1,
+            "title": "Apple Watch Series 6",
+            "description": "The latest and greatest from Apple, the Series 6 smart watch offers advanced health monitoring, fitness tracking, and seamless integration with your iPhone.",
+            "price": 199.9,
+            "image": "https://example.com/apple_watch_series6.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Samsung Galaxy Watch Active 2",
+            "description": "The Galaxy Watch Active 2 from Samsung offers a sleek design, advanced fitness tracking, and compatibility with both Android and iOS devices.",
+            "price": 179.99,
+            "image": "https://example.com/samsung_galaxy_watch_active2.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Fitbit Sense",
+            "description": "The Fitbit Sense offers advanced health monitoring features, including an ECG and stress tracking, as well as fitness and sleep tracking.",
+            "price": 329.95,
+            "image": "https://example.com/fitbit_sense.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Amazfit Bip S",
+            "description": "The Amazfit Bip S is an affordable smartwatch with a long battery life, GPS and fitness tracking, and a variety of watch faces to choose from.",
+            "price": 69.99,
+            "image": "https://example.com/amazfit_bip_s.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Garmin Forerunner 245",
+            "description": "The Garmin Forerunner 245 is a GPS running watch with advanced training features, including personalized coaching, and can be synced with your smartphone to receive notifications.",
+            "price": 299.99,
+            "image": "https://example.com/garmin_forerunner_245.jpg"
+        },
+        {
+            "id": 6,
+            "title": "Withings Steel HR Sport",
+            "description": "The Withings Steel HR Sport is a hybrid smartwatch with an analog watch face and a digital display for tracking activity, heart rate, and sleep.",
+            "price": 179.95,
+            "image": "https://example.com/withings_steel_hr_sport.jpg"
+        },
+        {
+            "id": 7,
+            "title": "Skagen Falster 3",
+            "description": "The Skagen Falster 3 is a stylish smartwatch with fitness tracking, Google Assistant, and compatibility with both Android and iOS devices.",
+            "price": 279,
+            "image": "https://example.com/skagen_falster3.jpg"
+        },
+        {
+            "id": 8,
+            "title": "TicWatch Pro 4G/LTE",
+            "description": "The TicWatch Pro 4G/LTE is a smartwatch that can make calls and send messages directly from the watch, with Google Assistant, GPS and fitness tracking.",
+            "price": 259,
+            "image": "https://example.com/ticwatch_pro4g.jpg"
+        },
+        {
+            "id": 9,
+            "title": "Pebble Time Smartwatch",
+            "description": "The Pebble Time Smartwatch offers a long battery life and a variety of apps, including fitness and sleep tracking, and can be connected to both Android and iOS devices.",
+            "price": 99.99,
+            "image": "https://example.com/pebble_time.jpg"
+        },
+        {
+            "id": 10,
+            "title": "Mobvoi Ticwatch E2",
+            "description": "The Mobvoi Ticwatch E2 is a budget-friendly smartwatch with fitness tracking and Google Assistant, compatible with both Android and iOS devices.",
+            "price": 159.99,
+            "image": "https://example.com/mobvoi_ticwatch_e2.jpg"
+        },
+        {
+            "id": 11,
+            "title": "Fossil Sport Smartwatch",
+            "description": "The Fossil Sport Smartwatch is a stylish option with Google Assistant, fitness tracking, and compatibility with both Android and iOS devices.",
+            "price": 199,
+            "image": "https://example.com/fossil_sport.jpg"
+        },
+        {
+            "id": 12,
+            "title": "Vivoactive 3 Music",
+            "description": "The Vivoactive 3 Music is a GPS smartwatch with music storage and advanced fitness tracking, and is compatible with both Android and iOS devices.",
+            "price": 299.99,
+            "image": "https://example.com/vivoactive3_music.jpg"
+        },
+        {
+            "id": 13,
+            "title": "Michael Kors Access Runway",
+            "description": "The Michael Kors Access Runway is a stylish smartwatch with fitness tracking and Google Assistant, compatible with both Android and iOS devices.",
+            "price": 295,
+            "image": "https://example.com/michael_kors_access_runway.jpg"
+        },
+        {
+            "id": 14,
+            "title": "Huawei Watch GT 2 Pro",
+            "description": "The Huawei Watch GT 2 Pro offers advanced fitness tracking, a long battery life, and integration with the Huawei Health app.",
+            "price": 249,
+            "image": "https://example.com/huawei_watch_gt2_pro.jpg"
+        },
+        {
+            "id": 15,
+            "title": "Ticwatch S2",
+            "description": "The Ticwatch S2 is a budget-friendly smartwatch with fitness tracking, Google Assistant, and compatibility with both Android and iOS devices.",
+            "price": 199.99,
+            "image": "https://example.com/ticwatch_s2.jpg"
+        },
+        {
+            "id": 16,
+            "title": "Zeblaze Thor 5",
+            "description": "The Zeblaze Thor 5 is a budget-friendly smartwatch with GPS, fitness tracking, and a variety of watch faces to choose from.",
+            "price": 99.99,
+            "image": "https://example.com/zeblaze_thor5.jpg"
+        },
+]

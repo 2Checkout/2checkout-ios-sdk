@@ -1,0 +1,1365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		991EB2B029C46D99009852C0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 991EB2AF29C46D99009852C0 /* Settings.bundle */; };
+		991EB2B829C8578E009852C0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991EB2B729C8578E009852C0 /* MainViewModel.swift */; };
+		992949632971927800B1DBDB /* PaymentMethodHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992949622971927800B1DBDB /* PaymentMethodHeaderView.swift */; };
+		9929499A29757AB600B1DBDB /* BaseFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9929499929757AB600B1DBDB /* BaseFormViewController.swift */; };
+		9929499C29757D8A00B1DBDB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9929499B29757D8A00B1DBDB /* Constants.swift */; };
+		9929499E29757EC500B1DBDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9929499D29757EC500B1DBDB /* Assets.xcassets */; };
+		992949A0297588DD00B1DBDB /* Verifone2CO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9929499F297588DD00B1DBDB /* Verifone2CO.swift */; };
+		992949A22975989300B1DBDB /* PaymentMethodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992949A12975989300B1DBDB /* PaymentMethodType.swift */; };
+		992949A52975FD9000B1DBDB /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992949A42975FD9000B1DBDB /* UIColor+Extension.swift */; };
+		992949A72976070B00B1DBDB /* PaymentMethodsForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992949A62976070B00B1DBDB /* PaymentMethodsForm.swift */; };
+		992949A9297607EF00B1DBDB /* CreditCardFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992949A8297607EF00B1DBDB /* CreditCardFormViewController.swift */; };
+		992949AB29760CD000B1DBDB /* PaymentFlowSessionDeletage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992949AA29760CCF00B1DBDB /* PaymentFlowSessionDeletage.swift */; };
+		99294A092978270000B1DBDB /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A082978270000B1DBDB /* BaseTextField.swift */; };
+		99294A0C2978314E00B1DBDB /* CardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A0A2978314E00B1DBDB /* CardValidator.swift */; };
+		99294A0D2978314E00B1DBDB /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A0B2978314E00B1DBDB /* Regex.swift */; };
+		99294A10297832D900B1DBDB /* CardFormNumberTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A0F297832D900B1DBDB /* CardFormNumberTextfield.swift */; };
+		99294A12297833B900B1DBDB /* CardFormExpiryDateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A11297833B900B1DBDB /* CardFormExpiryDateTextField.swift */; };
+		99294A142978343200B1DBDB /* Calendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A132978343200B1DBDB /* Calendar+Extension.swift */; };
+		99294A162978344700B1DBDB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A152978344700B1DBDB /* String+Extension.swift */; };
+		99294A182978358300B1DBDB /* CardFormCVVTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A172978358300B1DBDB /* CardFormCVVTextField.swift */; };
+		99294A1A297839A900B1DBDB /* CardFormNameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A19297839A900B1DBDB /* CardFormNameTextField.swift */; };
+		99294A1D29795C2A00B1DBDB /* FormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A1C29795C2A00B1DBDB /* FormButton.swift */; };
+		99294A1F29795ED900B1DBDB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A1E29795ED900B1DBDB /* UIView+Extension.swift */; };
+		99294A212979658800B1DBDB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A202979658800B1DBDB /* Extensions.swift */; };
+		99294A27297AAD7100B1DBDB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99294A29297AAD7100B1DBDB /* Localizable.strings */; };
+		99294A3C29828D8B00B1DBDB /* Verifone2COTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A3B29828D8B00B1DBDB /* Verifone2COTheme.swift */; };
+		99294A3F2983F41F00B1DBDB /* Verifone2CoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A3E2983F41F00B1DBDB /* Verifone2CoAPI.swift */; };
+		99294A422983F44800B1DBDB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A412983F44800B1DBDB /* Card.swift */; };
+		99294A4429885DBB00B1DBDB /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A4329885DBB00B1DBDB /* SpinnerView.swift */; };
+		99294A4629885E1600B1DBDB /* PaymentProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99294A4529885E1600B1DBDB /* PaymentProgress.swift */; };
+		992C28FA298921C500E43DB2 /* ApiEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C28F9298921C500E43DB2 /* ApiEndPoint.swift */; };
+		992C28FC2989223800E43DB2 /* RequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C28FB2989223800E43DB2 /* RequestParameters.swift */; };
+		992C28FE2989227200E43DB2 /* Verifone2CoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C28FD2989227200E43DB2 /* Verifone2CoError.swift */; };
+		992C29022989244E00E43DB2 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C29012989244E00E43DB2 /* NetworkRouter.swift */; };
+		992C2904298924C400E43DB2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C2903298924C400E43DB2 /* Logger.swift */; };
+		992C2906298936BF00E43DB2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C2905298936BF00E43DB2 /* Token.swift */; };
+		992C29082989371E00E43DB2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C29072989371E00E43DB2 /* NetworkManager.swift */; };
+		992C290A298A9CDB00E43DB2 /* OrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C2909298A9CDB00E43DB2 /* OrderRequest.swift */; };
+		992C290C298A9DAC00E43DB2 /* OrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C290B298A9DAC00E43DB2 /* OrderResponse.swift */; };
+		992C290E298AA36700E43DB2 /* ApiEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C290D298AA36700E43DB2 /* ApiEndPoint.swift */; };
+		992C2910298AA74800E43DB2 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C290F298AA74800E43DB2 /* UserDefaults+Extensions.swift */; };
+		992C2912298ABE7600E43DB2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C2911298ABE7600E43DB2 /* Date.swift */; };
+		992C2914298D1DDF00E43DB2 /* AnyCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C2913298D1DDF00E43DB2 /* AnyCodingKey.swift */; };
+		992C2916298D30FB00E43DB2 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C2915298D30FB00E43DB2 /* UIButton.swift */; };
+		992C2918298D54B700E43DB2 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C2917298D54B700E43DB2 /* String.swift */; };
+		992C2920298D5CDC00E43DB2 /* TextfieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C291C298D5CDC00E43DB2 /* TextfieldTableViewCell.swift */; };
+		992C2921298D5CDC00E43DB2 /* TextareaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C291D298D5CDC00E43DB2 /* TextareaTableViewCell.swift */; };
+		992C2928298D5E5B00E43DB2 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C2924298D5E5B00E43DB2 /* Parameters.swift */; };
+		992C292D2991185600E43DB2 /* MainVC+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C292C2991185600E43DB2 /* MainVC+Extensions.swift */; };
+		992C2936299A823200E43DB2 /* VF2COWebConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C2934299A823200E43DB2 /* VF2COWebConfig.swift */; };
+		992C2937299A823200E43DB2 /* VF2COAuthorizingWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C2935299A823200E43DB2 /* VF2COAuthorizingWebViewController.swift */; };
+		992C293C299D30A700E43DB2 /* PaymentAuthorizingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C293B299D30A700E43DB2 /* PaymentAuthorizingResult.swift */; };
+		99783B55296EFCC500066599 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99783B35296EFCC500066599 /* Localizable.strings */; };
+		99783B56296EFCC500066599 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 99783B44296EFCC500066599 /* products.json */; };
+		99783B57296EFCC500066599 /* SettingsTableviewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B4A296EFCC500066599 /* SettingsTableviewCells.swift */; };
+		99783B58296EFCC500066599 /* ResultTableviewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B4B296EFCC500066599 /* ResultTableviewCells.swift */; };
+		99783B59296EFCC500066599 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B4C296EFCC500066599 /* EmptyStateView.swift */; };
+		99783B5A296EFCC500066599 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B4D296EFCC500066599 /* LoadingView.swift */; };
+		99783B5C296EFCC500066599 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B50296EFCC500066599 /* ImageLoader.swift */; };
+		99783B5D296EFCC500066599 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B51296EFCC500066599 /* NetworkManager.swift */; };
+		99783B5F296EFCC500066599 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B54296EFCC500066599 /* Product.swift */; };
+		99783B72296EFCD700066599 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B61296EFCD700066599 /* AppColors.swift */; };
+		99783B73296EFCD700066599 /* MerchantAppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B62296EFCD700066599 /* MerchantAppConfig.swift */; };
+		99783B74296EFCD700066599 /* AppErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B63296EFCD700066599 /* AppErrors.swift */; };
+		99783B75296EFCD700066599 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B65296EFCD700066599 /* UIColor.swift */; };
+		99783B76296EFCD700066599 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B66296EFCD700066599 /* Decodable.swift */; };
+		99783B77296EFCD700066599 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B67296EFCD700066599 /* UIImage.swift */; };
+		99783B78296EFCD700066599 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B68296EFCD700066599 /* UIViewController.swift */; };
+		99783B79296EFCD700066599 /* LanguageListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B6A296EFCD700066599 /* LanguageListVC.swift */; };
+		99783B7A296EFCD700066599 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B6B296EFCD700066599 /* SettingsVC.swift */; };
+		99783B7B296EFCD700066599 /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B6C296EFCD700066599 /* ResultVC.swift */; };
+		99783B7C296EFCD700066599 /* DropDownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B6D296EFCD700066599 /* DropDownVC.swift */; };
+		99783B7D296EFCD700066599 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B6E296EFCD700066599 /* MainVC.swift */; };
+		99783B7E296EFCD700066599 /* AppTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B71296EFCD700066599 /* AppTextfield.swift */; };
+		99783B802970226400066599 /* Verifone2COPaymentForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B7F2970226400066599 /* Verifone2COPaymentForm.swift */; };
+		99783B822970313900066599 /* Verifone2CO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99D59BB529642CD400C06BB8 /* Verifone2CO.framework */; };
+		99783B832970313900066599 /* Verifone2CO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99D59BB529642CD400C06BB8 /* Verifone2CO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		99783B9B2970328000066599 /* PanModalPresentable+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B892970328000066599 /* PanModalPresentable+Defaults.swift */; };
+		99783B9C2970328000066599 /* PanModalPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B8A2970328000066599 /* PanModalPresentable.swift */; };
+		99783B9D2970328000066599 /* PanModalPresentable+LayoutHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B8B2970328000066599 /* PanModalPresentable+LayoutHelpers.swift */; };
+		99783B9E2970328000066599 /* PanModalHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B8C2970328000066599 /* PanModalHeight.swift */; };
+		99783B9F2970328000066599 /* PanModalPresentable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B8D2970328000066599 /* PanModalPresentable+UIViewController.swift */; };
+		99783BA02970328000066599 /* UIViewController+PanModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B8F2970328000066599 /* UIViewController+PanModalPresenter.swift */; };
+		99783BA12970328000066599 /* PanModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B902970328000066599 /* PanModalPresenter.swift */; };
+		99783BA22970328000066599 /* PanModalPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B922970328000066599 /* PanModalPresentationDelegate.swift */; };
+		99783BA32970328000066599 /* PanModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B942970328000066599 /* PanModalAnimator.swift */; };
+		99783BA42970328000066599 /* PanModalPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B952970328000066599 /* PanModalPresentationAnimator.swift */; };
+		99783BA52970328000066599 /* PanModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B972970328000066599 /* PanModalPresentationController.swift */; };
+		99783BA62970328000066599 /* PanContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B992970328000066599 /* PanContainerView.swift */; };
+		99783BA72970328000066599 /* DimmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B9A2970328000066599 /* DimmedView.swift */; };
+		99783BAA2970351D00066599 /* PaymentTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783BA92970351D00066599 /* PaymentTypeCell.swift */; };
+		99A2D99D29E037BB00E02E15 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2D99C29E037BB00E02E15 /* SettingsViewModel.swift */; };
+		99D59BBE29642CD600C06BB8 /* Verifone2CO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99D59BB529642CD400C06BB8 /* Verifone2CO.framework */; };
+		99D59BC329642CD600C06BB8 /* Verifone2COTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D59BC229642CD600C06BB8 /* Verifone2COTests.swift */; };
+		99D59BC429642CD600C06BB8 /* Verifone2CO.h in Headers */ = {isa = PBXBuildFile; fileRef = 99D59BB829642CD400C06BB8 /* Verifone2CO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99D59BD429642CF000C06BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D59BD329642CF000C06BB8 /* AppDelegate.swift */; };
+		99D59BDB29642CF000C06BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D59BD929642CF000C06BB8 /* Main.storyboard */; };
+		99D59BDD29642CF100C06BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D59BDC29642CF100C06BB8 /* Assets.xcassets */; };
+		99D59BE029642CF100C06BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D59BDE29642CF100C06BB8 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99783B842970313900066599 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99D59BAC29642CD400C06BB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99D59BB429642CD400C06BB8;
+			remoteInfo = Verifone2CO;
+		};
+		99D59BBF29642CD600C06BB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99D59BAC29642CD400C06BB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99D59BB429642CD400C06BB8;
+			remoteInfo = Verifone2CO;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		99783B862970313A00066599 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				99783B832970313900066599 /* Verifone2CO.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		991EB2AF29C46D99009852C0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		991EB2B729C8578E009852C0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		992949622971927800B1DBDB /* PaymentMethodHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodHeaderView.swift; sourceTree = "<group>"; };
+		9929499929757AB600B1DBDB /* BaseFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFormViewController.swift; sourceTree = "<group>"; };
+		9929499B29757D8A00B1DBDB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9929499D29757EC500B1DBDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9929499F297588DD00B1DBDB /* Verifone2CO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verifone2CO.swift; sourceTree = "<group>"; };
+		992949A12975989300B1DBDB /* PaymentMethodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodType.swift; sourceTree = "<group>"; };
+		992949A42975FD9000B1DBDB /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		992949A62976070B00B1DBDB /* PaymentMethodsForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsForm.swift; sourceTree = "<group>"; };
+		992949A8297607EF00B1DBDB /* CreditCardFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardFormViewController.swift; sourceTree = "<group>"; };
+		992949AA29760CCF00B1DBDB /* PaymentFlowSessionDeletage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFlowSessionDeletage.swift; sourceTree = "<group>"; };
+		99294A082978270000B1DBDB /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		99294A0A2978314E00B1DBDB /* CardValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardValidator.swift; sourceTree = "<group>"; };
+		99294A0B2978314E00B1DBDB /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		99294A0F297832D900B1DBDB /* CardFormNumberTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFormNumberTextfield.swift; sourceTree = "<group>"; };
+		99294A11297833B900B1DBDB /* CardFormExpiryDateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFormExpiryDateTextField.swift; sourceTree = "<group>"; };
+		99294A132978343200B1DBDB /* Calendar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Extension.swift"; sourceTree = "<group>"; };
+		99294A152978344700B1DBDB /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		99294A172978358300B1DBDB /* CardFormCVVTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFormCVVTextField.swift; sourceTree = "<group>"; };
+		99294A19297839A900B1DBDB /* CardFormNameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFormNameTextField.swift; sourceTree = "<group>"; };
+		99294A1C29795C2A00B1DBDB /* FormButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormButton.swift; sourceTree = "<group>"; };
+		99294A1E29795ED900B1DBDB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		99294A202979658800B1DBDB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		99294A28297AAD7100B1DBDB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A2A297AAD7400B1DBDB /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A2B297AAD7800B1DBDB /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A2C297AAD7A00B1DBDB /* et */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = et; path = et.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A2D297AAD7D00B1DBDB /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A2E297AAD7F00B1DBDB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A2F297AAD8100B1DBDB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A30297AAD8300B1DBDB /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A31297AAD8400B1DBDB /* is */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = is; path = is.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A32297AAD8600B1DBDB /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A33297AAD8800B1DBDB /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A34297AAD8900B1DBDB /* lt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lt; path = lt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A35297AAD8B00B1DBDB /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A36297AAD8D00B1DBDB /* nn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nn; path = nn.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A37297AAD8F00B1DBDB /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A38297AAD9200B1DBDB /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A39297AAD9400B1DBDB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A3A297AAD9600B1DBDB /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99294A3B29828D8B00B1DBDB /* Verifone2COTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verifone2COTheme.swift; sourceTree = "<group>"; };
+		99294A3E2983F41F00B1DBDB /* Verifone2CoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verifone2CoAPI.swift; sourceTree = "<group>"; };
+		99294A412983F44800B1DBDB /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		99294A4329885DBB00B1DBDB /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		99294A4529885E1600B1DBDB /* PaymentProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProgress.swift; sourceTree = "<group>"; };
+		992C28F9298921C500E43DB2 /* ApiEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndPoint.swift; sourceTree = "<group>"; };
+		992C28FB2989223800E43DB2 /* RequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParameters.swift; sourceTree = "<group>"; };
+		992C28FD2989227200E43DB2 /* Verifone2CoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verifone2CoError.swift; sourceTree = "<group>"; };
+		992C29012989244E00E43DB2 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		992C2903298924C400E43DB2 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		992C2905298936BF00E43DB2 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		992C29072989371E00E43DB2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		992C2909298A9CDB00E43DB2 /* OrderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRequest.swift; sourceTree = "<group>"; };
+		992C290B298A9DAC00E43DB2 /* OrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponse.swift; sourceTree = "<group>"; };
+		992C290D298AA36700E43DB2 /* ApiEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndPoint.swift; sourceTree = "<group>"; };
+		992C290F298AA74800E43DB2 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		992C2911298ABE7600E43DB2 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		992C2913298D1DDF00E43DB2 /* AnyCodingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodingKey.swift; sourceTree = "<group>"; };
+		992C2915298D30FB00E43DB2 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		992C2917298D54B700E43DB2 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		992C291C298D5CDC00E43DB2 /* TextfieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextfieldTableViewCell.swift; sourceTree = "<group>"; };
+		992C291D298D5CDC00E43DB2 /* TextareaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextareaTableViewCell.swift; sourceTree = "<group>"; };
+		992C2924298D5E5B00E43DB2 /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		992C292C2991185600E43DB2 /* MainVC+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+Extensions.swift"; sourceTree = "<group>"; };
+		992C2934299A823200E43DB2 /* VF2COWebConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VF2COWebConfig.swift; sourceTree = "<group>"; };
+		992C2935299A823200E43DB2 /* VF2COAuthorizingWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VF2COAuthorizingWebViewController.swift; sourceTree = "<group>"; };
+		992C293B299D30A700E43DB2 /* PaymentAuthorizingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAuthorizingResult.swift; sourceTree = "<group>"; };
+		99783B36296EFCC500066599 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B37296EFCC500066599 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B38296EFCC500066599 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B39296EFCC500066599 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B3A296EFCC500066599 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B3B296EFCC500066599 /* is */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = is; path = is.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B3C296EFCC500066599 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B3D296EFCC500066599 /* et */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = et; path = et.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B3E296EFCC500066599 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B3F296EFCC500066599 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B40296EFCC500066599 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B41296EFCC500066599 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B42296EFCC500066599 /* lt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lt; path = lt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B43296EFCC500066599 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B44296EFCC500066599 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		99783B45296EFCC500066599 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B46296EFCC500066599 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B47296EFCC500066599 /* nn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nn; path = nn.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B48296EFCC500066599 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99783B4A296EFCC500066599 /* SettingsTableviewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableviewCells.swift; sourceTree = "<group>"; };
+		99783B4B296EFCC500066599 /* ResultTableviewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableviewCells.swift; sourceTree = "<group>"; };
+		99783B4C296EFCC500066599 /* EmptyStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		99783B4D296EFCC500066599 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		99783B50296EFCC500066599 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		99783B51296EFCC500066599 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		99783B54296EFCC500066599 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		99783B61296EFCD700066599 /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		99783B62296EFCD700066599 /* MerchantAppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchantAppConfig.swift; sourceTree = "<group>"; };
+		99783B63296EFCD700066599 /* AppErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppErrors.swift; sourceTree = "<group>"; };
+		99783B65296EFCD700066599 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		99783B66296EFCD700066599 /* Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
+		99783B67296EFCD700066599 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		99783B68296EFCD700066599 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		99783B6A296EFCD700066599 /* LanguageListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListVC.swift; sourceTree = "<group>"; };
+		99783B6B296EFCD700066599 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		99783B6C296EFCD700066599 /* ResultVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
+		99783B6D296EFCD700066599 /* DropDownVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownVC.swift; sourceTree = "<group>"; };
+		99783B6E296EFCD700066599 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		99783B71296EFCD700066599 /* AppTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTextfield.swift; sourceTree = "<group>"; };
+		99783B7F2970226400066599 /* Verifone2COPaymentForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verifone2COPaymentForm.swift; sourceTree = "<group>"; };
+		99783B892970328000066599 /* PanModalPresentable+Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PanModalPresentable+Defaults.swift"; sourceTree = "<group>"; };
+		99783B8A2970328000066599 /* PanModalPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanModalPresentable.swift; sourceTree = "<group>"; };
+		99783B8B2970328000066599 /* PanModalPresentable+LayoutHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PanModalPresentable+LayoutHelpers.swift"; sourceTree = "<group>"; };
+		99783B8C2970328000066599 /* PanModalHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanModalHeight.swift; sourceTree = "<group>"; };
+		99783B8D2970328000066599 /* PanModalPresentable+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PanModalPresentable+UIViewController.swift"; sourceTree = "<group>"; };
+		99783B8F2970328000066599 /* UIViewController+PanModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PanModalPresenter.swift"; sourceTree = "<group>"; };
+		99783B902970328000066599 /* PanModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanModalPresenter.swift; sourceTree = "<group>"; };
+		99783B922970328000066599 /* PanModalPresentationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanModalPresentationDelegate.swift; sourceTree = "<group>"; };
+		99783B942970328000066599 /* PanModalAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanModalAnimator.swift; sourceTree = "<group>"; };
+		99783B952970328000066599 /* PanModalPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanModalPresentationAnimator.swift; sourceTree = "<group>"; };
+		99783B972970328000066599 /* PanModalPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanModalPresentationController.swift; sourceTree = "<group>"; };
+		99783B992970328000066599 /* PanContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanContainerView.swift; sourceTree = "<group>"; };
+		99783B9A2970328000066599 /* DimmedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimmedView.swift; sourceTree = "<group>"; };
+		99783BA92970351D00066599 /* PaymentTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTypeCell.swift; sourceTree = "<group>"; };
+		99A2D99C29E037BB00E02E15 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		99D59BB529642CD400C06BB8 /* Verifone2CO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Verifone2CO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99D59BB829642CD400C06BB8 /* Verifone2CO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Verifone2CO.h; sourceTree = "<group>"; };
+		99D59BBD29642CD600C06BB8 /* Verifone2COTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Verifone2COTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99D59BC229642CD600C06BB8 /* Verifone2COTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verifone2COTests.swift; sourceTree = "<group>"; };
+		99D59BD129642CF000C06BB8 /* Verifone2CO Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Verifone2CO Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99D59BD329642CF000C06BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		99D59BDA29642CF000C06BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		99D59BDC29642CF100C06BB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99D59BDF29642CF100C06BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99D59BE129642CF100C06BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99D59BB229642CD400C06BB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99D59BBA29642CD600C06BB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99D59BBE29642CD600C06BB8 /* Verifone2CO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99D59BCE29642CF000C06BB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99783B822970313900066599 /* Verifone2CO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		99294998297579F800B1DBDB /* VerifonePaymentForm */ = {
+			isa = PBXGroup;
+			children = (
+				99783BA82970350100066599 /* View */,
+				992949AC29760D5900B1DBDB /* CreditCardForm */,
+				9929499929757AB600B1DBDB /* BaseFormViewController.swift */,
+				99783B7F2970226400066599 /* Verifone2COPaymentForm.swift */,
+				992949A62976070B00B1DBDB /* PaymentMethodsForm.swift */,
+				992949A12975989300B1DBDB /* PaymentMethodType.swift */,
+				99294A4529885E1600B1DBDB /* PaymentProgress.swift */,
+				9929499F297588DD00B1DBDB /* Verifone2CO.swift */,
+				99294A3B29828D8B00B1DBDB /* Verifone2COTheme.swift */,
+				992949AA29760CCF00B1DBDB /* PaymentFlowSessionDeletage.swift */,
+			);
+			path = VerifonePaymentForm;
+			sourceTree = "<group>";
+		};
+		992949A32975FD7400B1DBDB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				99294A0E2978315A00B1DBDB /* CardValidator */,
+				99783B872970328000066599 /* PanModal */,
+				992949A42975FD9000B1DBDB /* UIColor+Extension.swift */,
+				99294A132978343200B1DBDB /* Calendar+Extension.swift */,
+				99294A152978344700B1DBDB /* String+Extension.swift */,
+				99294A1E29795ED900B1DBDB /* UIView+Extension.swift */,
+				99294A202979658800B1DBDB /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		992949AC29760D5900B1DBDB /* CreditCardForm */ = {
+			isa = PBXGroup;
+			children = (
+				992949A8297607EF00B1DBDB /* CreditCardFormViewController.swift */,
+			);
+			path = CreditCardForm;
+			sourceTree = "<group>";
+		};
+		99294A07297825F900B1DBDB /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				99294A082978270000B1DBDB /* BaseTextField.swift */,
+				99294A0F297832D900B1DBDB /* CardFormNumberTextfield.swift */,
+				99294A11297833B900B1DBDB /* CardFormExpiryDateTextField.swift */,
+				99294A172978358300B1DBDB /* CardFormCVVTextField.swift */,
+				99294A19297839A900B1DBDB /* CardFormNameTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		99294A0E2978315A00B1DBDB /* CardValidator */ = {
+			isa = PBXGroup;
+			children = (
+				99294A0A2978314E00B1DBDB /* CardValidator.swift */,
+				99294A0B2978314E00B1DBDB /* Regex.swift */,
+			);
+			path = CardValidator;
+			sourceTree = "<group>";
+		};
+		99294A1B29795C1500B1DBDB /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				99294A1C29795C2A00B1DBDB /* FormButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		99294A3D2983F3D000B1DBDB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				99294A402983F43C00B1DBDB /* Models */,
+				992C28FD2989227200E43DB2 /* Verifone2CoError.swift */,
+				992C28F9298921C500E43DB2 /* ApiEndPoint.swift */,
+				99294A3E2983F41F00B1DBDB /* Verifone2CoAPI.swift */,
+				992C28FB2989223800E43DB2 /* RequestParameters.swift */,
+				992C29012989244E00E43DB2 /* NetworkRouter.swift */,
+				992C29072989371E00E43DB2 /* NetworkManager.swift */,
+				992C2903298924C400E43DB2 /* Logger.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		99294A402983F43C00B1DBDB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				99294A412983F44800B1DBDB /* Card.swift */,
+				992C2905298936BF00E43DB2 /* Token.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		992C2919298D5CC000E43DB2 /* ConfigParams */ = {
+			isa = PBXGroup;
+			children = (
+				992C291B298D5CDC00E43DB2 /* Cells */,
+			);
+			path = ConfigParams;
+			sourceTree = "<group>";
+		};
+		992C291B298D5CDC00E43DB2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				992C291C298D5CDC00E43DB2 /* TextfieldTableViewCell.swift */,
+				992C291D298D5CDC00E43DB2 /* TextareaTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		992C2923298D5E4400E43DB2 /* ParamsFields */ = {
+			isa = PBXGroup;
+			children = (
+				992C2924298D5E5B00E43DB2 /* Parameters.swift */,
+			);
+			path = ParamsFields;
+			sourceTree = "<group>";
+		};
+		992C292E29965A9800E43DB2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				992C292F29965AAE00E43DB2 /* VF3SecureWebView */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		992C292F29965AAE00E43DB2 /* VF3SecureWebView */ = {
+			isa = PBXGroup;
+			children = (
+				992C2935299A823200E43DB2 /* VF2COAuthorizingWebViewController.swift */,
+				992C2934299A823200E43DB2 /* VF2COWebConfig.swift */,
+				992C293B299D30A700E43DB2 /* PaymentAuthorizingResult.swift */,
+			);
+			path = VF3SecureWebView;
+			sourceTree = "<group>";
+		};
+		99783B34296EFCC500066599 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				991EB2AF29C46D99009852C0 /* Settings.bundle */,
+				99D59BD929642CF000C06BB8 /* Main.storyboard */,
+				99D59BD329642CF000C06BB8 /* AppDelegate.swift */,
+				99783B35296EFCC500066599 /* Localizable.strings */,
+				99783B44296EFCC500066599 /* products.json */,
+				99D59BDE29642CF100C06BB8 /* LaunchScreen.storyboard */,
+				99D59BDC29642CF100C06BB8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		99783B49296EFCC500066599 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99783B4A296EFCC500066599 /* SettingsTableviewCells.swift */,
+				99783B4B296EFCC500066599 /* ResultTableviewCells.swift */,
+				99783B4C296EFCC500066599 /* EmptyStateView.swift */,
+				99783B4D296EFCC500066599 /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		99783B4E296EFCC500066599 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				99783B50296EFCC500066599 /* ImageLoader.swift */,
+				99783B51296EFCC500066599 /* NetworkManager.swift */,
+				992C290D298AA36700E43DB2 /* ApiEndPoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		99783B53296EFCC500066599 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				992C2923298D5E4400E43DB2 /* ParamsFields */,
+				99783B54296EFCC500066599 /* Product.swift */,
+				992C2909298A9CDB00E43DB2 /* OrderRequest.swift */,
+				992C290B298A9DAC00E43DB2 /* OrderResponse.swift */,
+				992C2913298D1DDF00E43DB2 /* AnyCodingKey.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		99783B60296EFCD700066599 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				99783B61296EFCD700066599 /* AppColors.swift */,
+				99783B62296EFCD700066599 /* MerchantAppConfig.swift */,
+				99783B63296EFCD700066599 /* AppErrors.swift */,
+				99783B64296EFCD700066599 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		99783B64296EFCD700066599 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				99783B65296EFCD700066599 /* UIColor.swift */,
+				99783B66296EFCD700066599 /* Decodable.swift */,
+				99783B67296EFCD700066599 /* UIImage.swift */,
+				99783B68296EFCD700066599 /* UIViewController.swift */,
+				992C290F298AA74800E43DB2 /* UserDefaults+Extensions.swift */,
+				992C2911298ABE7600E43DB2 /* Date.swift */,
+				992C2915298D30FB00E43DB2 /* UIButton.swift */,
+				992C2917298D54B700E43DB2 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		99783B69296EFCD700066599 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				992C2919298D5CC000E43DB2 /* ConfigParams */,
+				99783B6A296EFCD700066599 /* LanguageListVC.swift */,
+				99783B6B296EFCD700066599 /* SettingsVC.swift */,
+				99783B6C296EFCD700066599 /* ResultVC.swift */,
+				99783B6D296EFCD700066599 /* DropDownVC.swift */,
+				99783B6E296EFCD700066599 /* MainVC.swift */,
+				992C292C2991185600E43DB2 /* MainVC+Extensions.swift */,
+				991EB2B729C8578E009852C0 /* MainViewModel.swift */,
+				99A2D99C29E037BB00E02E15 /* SettingsViewModel.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		99783B6F296EFCD700066599 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				99783B70296EFCD700066599 /* TextFields */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		99783B70296EFCD700066599 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				99783B71296EFCD700066599 /* AppTextfield.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		99783B812970313900066599 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99783B872970328000066599 /* PanModal */ = {
+			isa = PBXGroup;
+			children = (
+				99783B882970328000066599 /* Presentable */,
+				99783B8E2970328000066599 /* Presenter */,
+				99783B912970328000066599 /* Delegate */,
+				99783B932970328000066599 /* Animator */,
+				99783B962970328000066599 /* Controller */,
+				99783B982970328000066599 /* View */,
+			);
+			path = PanModal;
+			sourceTree = "<group>";
+		};
+		99783B882970328000066599 /* Presentable */ = {
+			isa = PBXGroup;
+			children = (
+				99783B892970328000066599 /* PanModalPresentable+Defaults.swift */,
+				99783B8A2970328000066599 /* PanModalPresentable.swift */,
+				99783B8B2970328000066599 /* PanModalPresentable+LayoutHelpers.swift */,
+				99783B8C2970328000066599 /* PanModalHeight.swift */,
+				99783B8D2970328000066599 /* PanModalPresentable+UIViewController.swift */,
+			);
+			path = Presentable;
+			sourceTree = "<group>";
+		};
+		99783B8E2970328000066599 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				99783B8F2970328000066599 /* UIViewController+PanModalPresenter.swift */,
+				99783B902970328000066599 /* PanModalPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		99783B912970328000066599 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				99783B922970328000066599 /* PanModalPresentationDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		99783B932970328000066599 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				99783B942970328000066599 /* PanModalAnimator.swift */,
+				99783B952970328000066599 /* PanModalPresentationAnimator.swift */,
+			);
+			path = Animator;
+			sourceTree = "<group>";
+		};
+		99783B962970328000066599 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				99783B972970328000066599 /* PanModalPresentationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		99783B982970328000066599 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99783B992970328000066599 /* PanContainerView.swift */,
+				99783B9A2970328000066599 /* DimmedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		99783BA82970350100066599 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99294A1B29795C1500B1DBDB /* Buttons */,
+				99294A07297825F900B1DBDB /* TextFields */,
+				99783BA92970351D00066599 /* PaymentTypeCell.swift */,
+				992949622971927800B1DBDB /* PaymentMethodHeaderView.swift */,
+				99294A4329885DBB00B1DBDB /* SpinnerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		99D59BAB29642CD400C06BB8 = {
+			isa = PBXGroup;
+			children = (
+				99D59BB729642CD400C06BB8 /* Verifone2CO */,
+				99D59BC129642CD600C06BB8 /* Verifone2COTests */,
+				99D59BD229642CF000C06BB8 /* Verifone2CO Example */,
+				99D59BB629642CD400C06BB8 /* Products */,
+				99783B812970313900066599 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		99D59BB629642CD400C06BB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99D59BB529642CD400C06BB8 /* Verifone2CO.framework */,
+				99D59BBD29642CD600C06BB8 /* Verifone2COTests.xctest */,
+				99D59BD129642CF000C06BB8 /* Verifone2CO Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99D59BB729642CD400C06BB8 /* Verifone2CO */ = {
+			isa = PBXGroup;
+			children = (
+				99294A3D2983F3D000B1DBDB /* Network */,
+				992949A32975FD7400B1DBDB /* Helpers */,
+				992C292E29965A9800E43DB2 /* Services */,
+				99294998297579F800B1DBDB /* VerifonePaymentForm */,
+				9929499B29757D8A00B1DBDB /* Constants.swift */,
+				99D59BB829642CD400C06BB8 /* Verifone2CO.h */,
+				9929499D29757EC500B1DBDB /* Assets.xcassets */,
+				99294A29297AAD7100B1DBDB /* Localizable.strings */,
+			);
+			path = Verifone2CO;
+			sourceTree = "<group>";
+		};
+		99D59BC129642CD600C06BB8 /* Verifone2COTests */ = {
+			isa = PBXGroup;
+			children = (
+				99D59BC229642CD600C06BB8 /* Verifone2COTests.swift */,
+			);
+			path = Verifone2COTests;
+			sourceTree = "<group>";
+		};
+		99D59BD229642CF000C06BB8 /* Verifone2CO Example */ = {
+			isa = PBXGroup;
+			children = (
+				99783B34296EFCC500066599 /* Resources */,
+				99783B4E296EFCC500066599 /* Network */,
+				99783B6F296EFCD700066599 /* CustomViews */,
+				99783B60296EFCD700066599 /* Helpers */,
+				99783B53296EFCC500066599 /* Models */,
+				99783B49296EFCC500066599 /* Views */,
+				99783B69296EFCD700066599 /* Controllers */,
+				99D59BE129642CF100C06BB8 /* Info.plist */,
+			);
+			path = "Verifone2CO Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		99D59BB029642CD400C06BB8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99D59BC429642CD600C06BB8 /* Verifone2CO.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		99D59BB429642CD400C06BB8 /* Verifone2CO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99D59BC729642CD600C06BB8 /* Build configuration list for PBXNativeTarget "Verifone2CO" */;
+			buildPhases = (
+				99D59BB029642CD400C06BB8 /* Headers */,
+				99D59BB129642CD400C06BB8 /* Sources */,
+				99D59BB229642CD400C06BB8 /* Frameworks */,
+				99D59BB329642CD400C06BB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Verifone2CO;
+			productName = Verifone2CO;
+			productReference = 99D59BB529642CD400C06BB8 /* Verifone2CO.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		99D59BBC29642CD600C06BB8 /* Verifone2COTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99D59BCA29642CD600C06BB8 /* Build configuration list for PBXNativeTarget "Verifone2COTests" */;
+			buildPhases = (
+				99D59BB929642CD600C06BB8 /* Sources */,
+				99D59BBA29642CD600C06BB8 /* Frameworks */,
+				99D59BBB29642CD600C06BB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99D59BC029642CD600C06BB8 /* PBXTargetDependency */,
+			);
+			name = Verifone2COTests;
+			productName = Verifone2COTests;
+			productReference = 99D59BBD29642CD600C06BB8 /* Verifone2COTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		99D59BD029642CF000C06BB8 /* Verifone2CO Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99D59BE229642CF100C06BB8 /* Build configuration list for PBXNativeTarget "Verifone2CO Example" */;
+			buildPhases = (
+				99D59BCD29642CF000C06BB8 /* Sources */,
+				99D59BCE29642CF000C06BB8 /* Frameworks */,
+				99D59BCF29642CF000C06BB8 /* Resources */,
+				99783B862970313A00066599 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99783B852970313900066599 /* PBXTargetDependency */,
+			);
+			name = "Verifone2CO Example";
+			productName = "Verifone2CO Example";
+			productReference = 99D59BD129642CF000C06BB8 /* Verifone2CO Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99D59BAC29642CD400C06BB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					99D59BB429642CD400C06BB8 = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
+					};
+					99D59BBC29642CD600C06BB8 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					99D59BD029642CF000C06BB8 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 99D59BAF29642CD400C06BB8 /* Build configuration list for PBXProject "Verifone2CO" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+				he,
+				ar,
+				nb,
+				is,
+				da,
+				et,
+				it,
+				sv,
+				pl,
+				lv,
+				lt,
+				ru,
+				fr,
+				fi,
+				nn,
+				pt,
+			);
+			mainGroup = 99D59BAB29642CD400C06BB8;
+			productRefGroup = 99D59BB629642CD400C06BB8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99D59BB429642CD400C06BB8 /* Verifone2CO */,
+				99D59BBC29642CD600C06BB8 /* Verifone2COTests */,
+				99D59BD029642CF000C06BB8 /* Verifone2CO Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99D59BB329642CD400C06BB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9929499E29757EC500B1DBDB /* Assets.xcassets in Resources */,
+				99294A27297AAD7100B1DBDB /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99D59BBB29642CD600C06BB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99D59BCF29642CF000C06BB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99783B56296EFCC500066599 /* products.json in Resources */,
+				99D59BE029642CF100C06BB8 /* LaunchScreen.storyboard in Resources */,
+				99783B55296EFCC500066599 /* Localizable.strings in Resources */,
+				99D59BDD29642CF100C06BB8 /* Assets.xcassets in Resources */,
+				991EB2B029C46D99009852C0 /* Settings.bundle in Resources */,
+				99D59BDB29642CF000C06BB8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99D59BB129642CD400C06BB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99294A10297832D900B1DBDB /* CardFormNumberTextfield.swift in Sources */,
+				99294A0C2978314E00B1DBDB /* CardValidator.swift in Sources */,
+				99294A12297833B900B1DBDB /* CardFormExpiryDateTextField.swift in Sources */,
+				992949AB29760CD000B1DBDB /* PaymentFlowSessionDeletage.swift in Sources */,
+				99294A422983F44800B1DBDB /* Card.swift in Sources */,
+				992949A52975FD9000B1DBDB /* UIColor+Extension.swift in Sources */,
+				99294A4429885DBB00B1DBDB /* SpinnerView.swift in Sources */,
+				99294A3F2983F41F00B1DBDB /* Verifone2CoAPI.swift in Sources */,
+				99294A1D29795C2A00B1DBDB /* FormButton.swift in Sources */,
+				99294A4629885E1600B1DBDB /* PaymentProgress.swift in Sources */,
+				992C28FE2989227200E43DB2 /* Verifone2CoError.swift in Sources */,
+				992C28FC2989223800E43DB2 /* RequestParameters.swift in Sources */,
+				99783BA72970328000066599 /* DimmedView.swift in Sources */,
+				992C2904298924C400E43DB2 /* Logger.swift in Sources */,
+				99783B802970226400066599 /* Verifone2COPaymentForm.swift in Sources */,
+				99294A1F29795ED900B1DBDB /* UIView+Extension.swift in Sources */,
+				99294A162978344700B1DBDB /* String+Extension.swift in Sources */,
+				992C29022989244E00E43DB2 /* NetworkRouter.swift in Sources */,
+				99783B9C2970328000066599 /* PanModalPresentable.swift in Sources */,
+				992949A22975989300B1DBDB /* PaymentMethodType.swift in Sources */,
+				99783BA02970328000066599 /* UIViewController+PanModalPresenter.swift in Sources */,
+				99783B9F2970328000066599 /* PanModalPresentable+UIViewController.swift in Sources */,
+				992949A9297607EF00B1DBDB /* CreditCardFormViewController.swift in Sources */,
+				99783BA62970328000066599 /* PanContainerView.swift in Sources */,
+				99783BAA2970351D00066599 /* PaymentTypeCell.swift in Sources */,
+				99294A3C29828D8B00B1DBDB /* Verifone2COTheme.swift in Sources */,
+				992C2937299A823200E43DB2 /* VF2COAuthorizingWebViewController.swift in Sources */,
+				99783BA42970328000066599 /* PanModalPresentationAnimator.swift in Sources */,
+				9929499C29757D8A00B1DBDB /* Constants.swift in Sources */,
+				99294A212979658800B1DBDB /* Extensions.swift in Sources */,
+				99294A0D2978314E00B1DBDB /* Regex.swift in Sources */,
+				992C29082989371E00E43DB2 /* NetworkManager.swift in Sources */,
+				992949A0297588DD00B1DBDB /* Verifone2CO.swift in Sources */,
+				992C28FA298921C500E43DB2 /* ApiEndPoint.swift in Sources */,
+				9929499A29757AB600B1DBDB /* BaseFormViewController.swift in Sources */,
+				99294A142978343200B1DBDB /* Calendar+Extension.swift in Sources */,
+				992C2936299A823200E43DB2 /* VF2COWebConfig.swift in Sources */,
+				99783BA22970328000066599 /* PanModalPresentationDelegate.swift in Sources */,
+				992C293C299D30A700E43DB2 /* PaymentAuthorizingResult.swift in Sources */,
+				99783B9B2970328000066599 /* PanModalPresentable+Defaults.swift in Sources */,
+				99294A092978270000B1DBDB /* BaseTextField.swift in Sources */,
+				99294A1A297839A900B1DBDB /* CardFormNameTextField.swift in Sources */,
+				992C2906298936BF00E43DB2 /* Token.swift in Sources */,
+				99783BA52970328000066599 /* PanModalPresentationController.swift in Sources */,
+				992949632971927800B1DBDB /* PaymentMethodHeaderView.swift in Sources */,
+				99783BA32970328000066599 /* PanModalAnimator.swift in Sources */,
+				99294A182978358300B1DBDB /* CardFormCVVTextField.swift in Sources */,
+				99783B9D2970328000066599 /* PanModalPresentable+LayoutHelpers.swift in Sources */,
+				99783BA12970328000066599 /* PanModalPresenter.swift in Sources */,
+				99783B9E2970328000066599 /* PanModalHeight.swift in Sources */,
+				992949A72976070B00B1DBDB /* PaymentMethodsForm.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99D59BB929642CD600C06BB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99D59BC329642CD600C06BB8 /* Verifone2COTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99D59BCD29642CF000C06BB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				992C292D2991185600E43DB2 /* MainVC+Extensions.swift in Sources */,
+				992C2920298D5CDC00E43DB2 /* TextfieldTableViewCell.swift in Sources */,
+				99783B7A296EFCD700066599 /* SettingsVC.swift in Sources */,
+				992C2910298AA74800E43DB2 /* UserDefaults+Extensions.swift in Sources */,
+				991EB2B829C8578E009852C0 /* MainViewModel.swift in Sources */,
+				99783B5C296EFCC500066599 /* ImageLoader.swift in Sources */,
+				99783B7C296EFCD700066599 /* DropDownVC.swift in Sources */,
+				992C2918298D54B700E43DB2 /* String.swift in Sources */,
+				99783B75296EFCD700066599 /* UIColor.swift in Sources */,
+				992C2916298D30FB00E43DB2 /* UIButton.swift in Sources */,
+				99783B74296EFCD700066599 /* AppErrors.swift in Sources */,
+				992C290C298A9DAC00E43DB2 /* OrderResponse.swift in Sources */,
+				99783B76296EFCD700066599 /* Decodable.swift in Sources */,
+				99783B7B296EFCD700066599 /* ResultVC.swift in Sources */,
+				99783B57296EFCC500066599 /* SettingsTableviewCells.swift in Sources */,
+				99783B7E296EFCD700066599 /* AppTextfield.swift in Sources */,
+				992C2928298D5E5B00E43DB2 /* Parameters.swift in Sources */,
+				99D59BD429642CF000C06BB8 /* AppDelegate.swift in Sources */,
+				992C290A298A9CDB00E43DB2 /* OrderRequest.swift in Sources */,
+				99783B59296EFCC500066599 /* EmptyStateView.swift in Sources */,
+				99A2D99D29E037BB00E02E15 /* SettingsViewModel.swift in Sources */,
+				992C290E298AA36700E43DB2 /* ApiEndPoint.swift in Sources */,
+				99783B72296EFCD700066599 /* AppColors.swift in Sources */,
+				99783B78296EFCD700066599 /* UIViewController.swift in Sources */,
+				992C2914298D1DDF00E43DB2 /* AnyCodingKey.swift in Sources */,
+				99783B5D296EFCC500066599 /* NetworkManager.swift in Sources */,
+				99783B77296EFCD700066599 /* UIImage.swift in Sources */,
+				99783B5A296EFCC500066599 /* LoadingView.swift in Sources */,
+				99783B7D296EFCD700066599 /* MainVC.swift in Sources */,
+				99783B79296EFCD700066599 /* LanguageListVC.swift in Sources */,
+				99783B58296EFCC500066599 /* ResultTableviewCells.swift in Sources */,
+				992C2912298ABE7600E43DB2 /* Date.swift in Sources */,
+				99783B5F296EFCC500066599 /* Product.swift in Sources */,
+				992C2921298D5CDC00E43DB2 /* TextareaTableViewCell.swift in Sources */,
+				99783B73296EFCD700066599 /* MerchantAppConfig.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99783B852970313900066599 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99D59BB429642CD400C06BB8 /* Verifone2CO */;
+			targetProxy = 99783B842970313900066599 /* PBXContainerItemProxy */;
+		};
+		99D59BC029642CD600C06BB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99D59BB429642CD400C06BB8 /* Verifone2CO */;
+			targetProxy = 99D59BBF29642CD600C06BB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		99294A29297AAD7100B1DBDB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99294A28297AAD7100B1DBDB /* en */,
+				99294A2A297AAD7400B1DBDB /* ar */,
+				99294A2B297AAD7800B1DBDB /* da */,
+				99294A2C297AAD7A00B1DBDB /* et */,
+				99294A2D297AAD7D00B1DBDB /* fi */,
+				99294A2E297AAD7F00B1DBDB /* fr */,
+				99294A2F297AAD8100B1DBDB /* de */,
+				99294A30297AAD8300B1DBDB /* he */,
+				99294A31297AAD8400B1DBDB /* is */,
+				99294A32297AAD8600B1DBDB /* it */,
+				99294A33297AAD8800B1DBDB /* lv */,
+				99294A34297AAD8900B1DBDB /* lt */,
+				99294A35297AAD8B00B1DBDB /* nb */,
+				99294A36297AAD8D00B1DBDB /* nn */,
+				99294A37297AAD8F00B1DBDB /* pl */,
+				99294A38297AAD9200B1DBDB /* pt */,
+				99294A39297AAD9400B1DBDB /* ru */,
+				99294A3A297AAD9600B1DBDB /* sv */,
+			);
+			name = Localizable.strings;
+			path = Localizations;
+			sourceTree = "<group>";
+		};
+		99783B35296EFCC500066599 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99783B36296EFCC500066599 /* de */,
+				99783B37296EFCC500066599 /* he */,
+				99783B38296EFCC500066599 /* ar */,
+				99783B39296EFCC500066599 /* en */,
+				99783B3A296EFCC500066599 /* nb */,
+				99783B3B296EFCC500066599 /* is */,
+				99783B3C296EFCC500066599 /* da */,
+				99783B3D296EFCC500066599 /* et */,
+				99783B3E296EFCC500066599 /* it */,
+				99783B3F296EFCC500066599 /* sv */,
+				99783B40296EFCC500066599 /* pl */,
+				99783B41296EFCC500066599 /* lv */,
+				99783B42296EFCC500066599 /* lt */,
+				99783B43296EFCC500066599 /* ru */,
+				99783B45296EFCC500066599 /* fr */,
+				99783B46296EFCC500066599 /* fi */,
+				99783B47296EFCC500066599 /* nn */,
+				99783B48296EFCC500066599 /* pt */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		99D59BD929642CF000C06BB8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99D59BDA29642CF000C06BB8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		99D59BDE29642CF100C06BB8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99D59BDF29642CF100C06BB8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99D59BC529642CD600C06BB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		99D59BC629642CD600C06BB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		99D59BC829642CD600C06BB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_ARCHS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.verifone2co.sdk;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99D59BC929642CD600C06BB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_ARCHS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.verifone2co.sdk;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		99D59BCB29642CD600C06BB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.verifone2co.sdk.Verifone2COTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99D59BCC29642CD600C06BB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.verifone2co.sdk.Verifone2COTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		99D59BE329642CF100C06BB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Verifone2CO Example/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.2checkout.Verifone2CO-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99D59BE429642CF100C06BB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Verifone2CO Example/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.2checkout.Verifone2CO-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99D59BAF29642CD400C06BB8 /* Build configuration list for PBXProject "Verifone2CO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99D59BC529642CD600C06BB8 /* Debug */,
+				99D59BC629642CD600C06BB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99D59BC729642CD600C06BB8 /* Build configuration list for PBXNativeTarget "Verifone2CO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99D59BC829642CD600C06BB8 /* Debug */,
+				99D59BC929642CD600C06BB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99D59BCA29642CD600C06BB8 /* Build configuration list for PBXNativeTarget "Verifone2COTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99D59BCB29642CD600C06BB8 /* Debug */,
+				99D59BCC29642CD600C06BB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99D59BE229642CF100C06BB8 /* Build configuration list for PBXNativeTarget "Verifone2CO Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99D59BE329642CF100C06BB8 /* Debug */,
+				99D59BE429642CF100C06BB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 99D59BAC29642CD400C06BB8 /* Project object */;
+}
