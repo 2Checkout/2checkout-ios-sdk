@@ -22,14 +22,14 @@ The 2Checkout SDK is designed to be easy to integrate into your application. Wit
 
 ##### CocoaPods
 
-1. Add the following line to your Podfile: `pod 'Verifone2CO', :git => ''`
+1. Add the following line to your Podfile: `pod 'Verifone2CO', :git => 'https://github.com/2Checkout/2checkout-ios-sdk'`
 2. Run `pod install`
 
 ##### Carthage
 
 To integrate the VerifoneSDK into your Xcode project using Carthage, proceed with the following steps:
 
-1. Add the following line to your Cartfile: `github "" "main"`
+1. Add the following line to your Cartfile: `"https://github.com/2Checkout/2checkout-ios-sdk" ~> 1.0.0`
 2. Run `carthage update --use-xcframeworks`
 3. Link the frameworks with your target as described in [Carthage Readme](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application).
 
