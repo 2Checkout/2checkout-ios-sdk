@@ -13,8 +13,6 @@ Pod::Spec.new do |s|
 
   s.platform         = :ios, "11.0"
   s.swift_version    = "5.0"
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
   s.source_files   = "Verifone2CO/**/*.{h,swift}"
   s.resources = ["Verifone2CO/**/*.{lproj,xcassets,storyboard}"]
