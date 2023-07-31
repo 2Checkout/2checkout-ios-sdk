@@ -2,6 +2,8 @@
 //  CreditCardForm.swift
 //  Verifone2CO
 //
+//  Created by Oraz Atakishiyev on 17.01.2023.
+//
 
 import UIKit
 
@@ -42,7 +44,6 @@ public final class CreditCardFormViewController: Verifone2COPaymentForm {
     var doneEditingBarButtonItem: UIBarButtonItem! = UIBarButtonItem()
     private var cardBrandImageView: UIImageView! = UIImageView()
     private var cvcInfoImageView: UIImageView! = UIImageView()
-    private var requestingIndicatorView: UIActivityIndicatorView! = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
     private var edgeInsets = UIEdgeInsets(top: 0, left: 15.0, bottom: 0.0, right: -15.0)
     private var confirmButton: FormButton = FormButton(frame: .zero)
 
@@ -51,35 +52,15 @@ public final class CreditCardFormViewController: Verifone2COPaymentForm {
     private var cardFormErrorLabels: [UILabel]! = []
     private var fontName: String = "Helvetica Neue"
 
-    private lazy var formFieldsToolbarView: UIToolbar = {
-        let formFieldsToolbarView = UIToolbar()
-        formFieldsToolbarView.barStyle = .default
-        formFieldsToolbarView.sizeToFit()
-
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(CreditCardFormViewController.doneEditing(_:)))
-        let flexibleSpaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let fixedSpaceButton = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-
-        gotoPrevFieldBarButtonItem = UIBarButtonItem(
-            image: UIImage(named: "back", in: .module, compatibleWith: nil)!,
-            style: UIBarButtonItem.Style.plain, target: self,
-            action: #selector(CreditCardFormViewController.gotoPreviousField(_:)))
-        gotoNextFieldBarButtonItem.width = 50.0
-        gotoNextFieldBarButtonItem = UIBarButtonItem(
-            image: UIImage(named: "next_field", in: .module, compatibleWith: nil)!,
-            style: UIBarButtonItem.Style.plain, target: self,
-            action: #selector(CreditCardFormViewController.gotoNextField(_:)))
-
-        formFieldsToolbarView.setItems([fixedSpaceButton, gotoPrevFieldBarButtonItem, fixedSpaceButton, gotoNextFieldBarButtonItem, flexibleSpaceButton, doneButton], animated: false)
-        return formFieldsToolbarView
-    }()
+    private var formFieldsToolbarView: UIToolbar = UIToolbar()
 
     // MARK: - INITIALIZERS
     init(paymentConfiguration: Verifone2CO.PaymentConfiguration) {
         super.init(nibName: nil, bundle: nil)
         self.theme = paymentConfiguration.theme
         self.paymentConfiguration = paymentConfiguration
-
+        self.cardFormNumberTextField.secureTextEntry = paymentConfiguration.cardSecureEntryType
+        self.cardFormCvcTextField.secureTextEntry = paymentConfiguration.cardSecureEntryType
     }
 
     required init?(coder: NSCoder) {
@@ -103,6 +84,28 @@ public final class CreditCardFormViewController: Verifone2COPaymentForm {
         }
         configureViews()
         configureColors()
+        configureToolbar()
+    }
+
+    private func configureToolbar() {
+        formFieldsToolbarView.barStyle = .default
+        formFieldsToolbarView.sizeToFit()
+
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(CreditCardFormViewController.doneEditing(_:)))
+        let flexibleSpaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let fixedSpaceButton = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+
+        gotoPrevFieldBarButtonItem = UIBarButtonItem(
+            image: UIImage(named: "back", in: .module, compatibleWith: nil)!,
+            style: UIBarButtonItem.Style.plain, target: self,
+            action: #selector(CreditCardFormViewController.gotoPreviousField(_:)))
+        gotoNextFieldBarButtonItem.width = 50.0
+        gotoNextFieldBarButtonItem = UIBarButtonItem(
+            image: UIImage(named: "next_field", in: .module, compatibleWith: nil)!,
+            style: UIBarButtonItem.Style.plain, target: self,
+            action: #selector(CreditCardFormViewController.gotoNextField(_:)))
+
+        formFieldsToolbarView.setItems([fixedSpaceButton, gotoPrevFieldBarButtonItem, fixedSpaceButton, gotoNextFieldBarButtonItem, flexibleSpaceButton, doneButton], animated: false)
     }
 
     private var isCardInputDataValid: Bool {
@@ -127,8 +130,8 @@ public final class CreditCardFormViewController: Verifone2COPaymentForm {
         switchButton.addTarget(self, action: #selector(CreditCardFormViewController.saveCardSwitchChanged), for: .valueChanged)
 
         cardFormInputFields.forEach {
-            $0.addTarget(self, action: #selector(updatePaymentMethodTypeIcons(_:)), for: .valueChanged)
-            $0.addTarget(self, action: #selector(updatePaymentMethodTypeIcons(_:)), for: .editingChanged)
+            $0.addTarget(self, action: #selector(updateCardBrand), for: .valueChanged)
+            $0.addTarget(self, action: #selector(updateCardBrand), for: .editingChanged)
             $0.addTarget(self, action: #selector(updateTextFieldVlidationLabel(_:)), for: .editingDidBegin)
             $0.addTarget(self, action: #selector(validateTextField(_:)), for: .editingDidEnd)
         }
@@ -164,8 +167,6 @@ public final class CreditCardFormViewController: Verifone2COPaymentForm {
             $0.textColor = UIColor.red
         }
 
-        cardFormInputFields.forEach(self.updatePaymentMethodTypeIcons(_:))
-
         cardFormInputFields.forEach {
             $0.backgroundColor = theme.textfieldBackgroundColor
             $0.borderWidth = 1
@@ -183,26 +184,12 @@ public final class CreditCardFormViewController: Verifone2COPaymentForm {
         titleCardForm.textColor = theme.cardTitleColor
 
         updateCardBrand()
-        cardFormInputFields.forEach {
-            $0.adjustsFontForContentSizeCategory = true
-        }
-        cardFormLabels.forEach {
-            $0.adjustsFontForContentSizeCategory = true
-        }
-        confirmButton.titleLabel?.adjustsFontForContentSizeCategory = true
         cardFormNumberTextField.rightView = cardBrandImageView
         cardFormCvcTextField.rightView = cvcInfoImageView
     }
 
-    private func updateCardBrand() {
-        let valid = isCardInputDataValid
-        confirmButton.isEnabled = valid
-
-        if valid {
-            confirmButton.accessibilityTraits.remove(UIAccessibilityTraits.notEnabled)
-        } else {
-            confirmButton.accessibilityTraits.insert(UIAccessibilityTraits.notEnabled)
-        }
+    @objc private func updateCardBrand() {
+        confirmButton.isEnabled = isCardInputDataValid
 
         let cardBrandIconName: String? = cardFormNumberTextField.cardBrand
         var cvcInfoIconName: String?
@@ -227,7 +214,7 @@ public final class CreditCardFormViewController: Verifone2COPaymentForm {
             errorLabel.alpha = 0.0
         } catch {
             errorLabel.text = getValidationErrorString(for: textField, error: error)
-            errorLabel.alpha = errorLabel.text != "-" ? 1.0 : 0.0
+            errorLabel.alpha = errorLabel.text != "" ? 1.0 : 0.0
         }
     }
 
@@ -244,18 +231,6 @@ public final class CreditCardFormViewController: Verifone2COPaymentForm {
         default:
             return nil
         }
-    }
-
-    private func startActivityIndicator() {
-        requestingIndicatorView.startAnimating()
-        confirmButton.isEnabled = false
-        view.isUserInteractionEnabled = false
-    }
-
-    private func stopActivityIndicator() {
-        requestingIndicatorView.stopAnimating()
-        confirmButton.isEnabled = true
-        view.isUserInteractionEnabled = true
     }
 
     @objc func payAction() {
@@ -347,7 +322,7 @@ extension CreditCardFormViewController {
     private func getValidationErrorString(for textField: UITextField, error: Error) -> String {
         switch (error, textField) {
         case (VF2COValidationError.requiredInput, _):
-            return "-"
+            return ""
         case (VF2COValidationError.invalidData, cardFormNumberTextField):
             return "nrNotValid".localized(withComment: "Credit card number is invalid")
         case (VF2COValidationError.invalidData, cardFormExpiryDateTextField):
@@ -356,27 +331,19 @@ extension CreditCardFormViewController {
             return "cvvNotValid".localized(withComment: "CVV code is invalid")
         case (VF2COValidationError.invalidData, cardFormNameTextField):
             return "cardHolderNameInvalid".localized(withComment: "Card holder name is invalid")
-        case (_, cardFormNumberTextField),
-            (_, cardFormExpiryDateTextField),
-            (_, cardFormCvcTextField),
-            (_, cardFormNameTextField):
-            return error.localizedDescription
         default:
-            return "-"
+            return ""
         }
     }
 }
 
 extension CreditCardFormViewController {
-    @objc private func updatePaymentMethodTypeIcons(_ sender: BaseTextField) {
-        updateCardBrand()
-    }
 
     @objc private func validateTextField(_ sender: BaseTextField) {
         let duration = TimeInterval(UINavigationController.hideShowBarDuration)
         UIView.animate(withDuration: duration,
                        delay: 0.0,
-                       options: [.curveEaseInOut, .allowUserInteraction, .beginFromCurrentState, .layoutSubviews]) {
+                       options: [.curveEaseInOut, .allowUserInteraction]) {
             self.validateTextFieldAndCatchError(sender)
         }
         sender.borderColor = theme.textfieldBorderColor
@@ -387,7 +354,7 @@ extension CreditCardFormViewController {
             let duration = TimeInterval(UINavigationController.hideShowBarDuration)
             UIView.animate(withDuration: duration,
                            delay: 0.0,
-                           options: [.curveEaseInOut, .allowUserInteraction, .beginFromCurrentState, .layoutSubviews]) {
+                           options: [.curveEaseInOut, .allowUserInteraction]) {
                 errorLabel.alpha = 0.0
             }
         }
@@ -538,14 +505,12 @@ extension CreditCardFormViewController {
         hBottomStackView.addArrangedSubview(switchButtonLabel)
         hBottomStackView.addArrangedSubview(switchButton)
         hBottomStackView.translatesAutoresizingMaskIntoConstraints = false
-        requestingIndicatorView.translatesAutoresizingMaskIntoConstraints = false
 
         self.contentView.addSubview(hTopStackView)
         if paymentConfiguration.showCardSaveSwitch {
             self.contentView.addSubview(hBottomStackView)
         }
         self.contentView.addSubview(confirmButton)
-        self.confirmButton.addSubview(requestingIndicatorView)
 
         let hFooterStackView   = UIStackView()
         hFooterStackView.axis  = NSLayoutConstraint.Axis.horizontal
@@ -684,10 +649,7 @@ extension CreditCardFormViewController {
         NSLayoutConstraint.activate([
             confirmButton.heightAnchor.constraint(equalToConstant: 44.0),
             confirmButton.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: edgeInsets.left),
-            confirmButton.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: edgeInsets.right),
-
-            requestingIndicatorView.centerXAnchor.constraint(equalTo: confirmButton.centerXAnchor, constant: 0.0),
-            requestingIndicatorView.centerYAnchor.constraint(equalTo: confirmButton.centerYAnchor, constant: 0.0)
+            confirmButton.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: edgeInsets.right)
         ])
 
         // BOTTOM STACK VIEW

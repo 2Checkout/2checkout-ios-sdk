@@ -22,11 +22,11 @@ final class NetworkManager {
         let secretKey = params?.secretKey ?? ""
         let checkSumString = "\(sellerID.count)\(sellerID)\(dateString.count)\(dateString)"
         let hash = checkSumString.hmac(key: secretKey)
-
+        
         return [
             "Content-Type": "application/json",
             "Accept": "application/json",
-            "X-Avangate-Authentication": "code=\"\(sellerID)\" date=\"\(dateString)\" hash=\"\(hash)\""
+            "X-Avangate-Authentication": "code=\"\(sellerID)\" date=\"\(dateString)\" hash=\"\(hash)\" algo=\"sha256\" "
         ]
     }
 

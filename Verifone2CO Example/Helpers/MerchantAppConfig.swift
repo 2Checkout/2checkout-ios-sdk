@@ -27,6 +27,7 @@ public enum Keys {
     public static var settingsBundleTestModeStatus = "kTestModeStatus"
     public static var paymentDetailsType = "EES_TOKEN_PAYMENT"
     public static var paymentDetailsTypeTest = "TEST"
+    public static var cardSecureEntry = "cardSecureEntry"
 }
 
 struct MerchantAppConfig {

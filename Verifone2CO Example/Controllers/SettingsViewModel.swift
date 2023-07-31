@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Verifone2CO
 
 struct SettingsViewModel {
     fileprivate var defaults = UserDefaults.standard
@@ -22,6 +23,7 @@ struct SettingsViewModel {
         }
     }
     var onUpdate: ((Int?) -> Void)?
+    var cardSecureEntry: SecureTextEtryType = .none
 
     init() {
         self.setupFields()
@@ -29,6 +31,7 @@ struct SettingsViewModel {
 
     private mutating func setupFields() {
         self.items = []
+        self.cardSecureEntry = SecureTextEtryType(rawValue: defaults.string(forKey: Keys.cardSecureEntry) ?? "") ?? .none
         self.items.append(SettingSection(header: "Card Form", cells: [
             SettingCellData(type: .textfield, placeholder: "Backgorund color:", value: defaults.string(forKey: "textfield_1000") ?? "FFFFFF", eventType: .textfield),
             SettingCellData(type: .textfield, placeholder: "Textfield background color:", value: defaults.string(forKey: "textfield_1001") ?? "FFFFFF", eventType: .textfield),
@@ -38,7 +41,8 @@ struct SettingsViewModel {
             SettingCellData(type: .textfield, placeholder: "Pay button disabled color:", value: defaults.string(forKey: "textfield_1005") ?? "E4E7ED", eventType: .textfield),
             SettingCellData(type: .textfield, placeholder: "Pay button text color:", value: defaults.string(forKey: "textfield_1006") ?? "FFFFFF", eventType: .textfield),
             SettingCellData(type: .textfield, placeholder: "Card title color:", value: defaults.string(forKey: "textfield_1007") ?? "000000", eventType: .textfield),
-            SettingCellData(type: .linkButton, placeholder: "Reset to default values", value: "Reset", eventType: .defaultValues)
+            SettingCellData(type: .linkButton, placeholder: "Reset to default values", value: "Reset", eventType: .defaultValues),
+            SettingCellData(type: .segmentedControl, placeholder: "Card form security entry", value: cardSecureEntry.rawValue, eventType: .cardSecurityEntry)
         ]))
 
         self.items.append(SettingSection(header: "", cells: [
@@ -103,8 +107,9 @@ struct SettingsViewModel {
         defaults.set(switchButtonsState.filter {$0.value}.map {$0.key}, forKey: Keys.paymentOptions)
 
         defaults.set(paymentDetailsType, forKey: Keys.paymentDetailsType)
-        defaults.save(customObject: self.parameters, inKey: AppPaymentMethodType.creditCard.rawValue
-        )
+        defaults.save(customObject: self.parameters, inKey: AppPaymentMethodType.creditCard.rawValue)
+
+        defaults.set(cardSecureEntry.rawValue, forKey: Keys.cardSecureEntry)
     }
 }
 
@@ -128,6 +133,7 @@ enum SettingCellType {
     case textLabel
     case paramTextfield
     case button
+    case segmentedControl
 }
 
 public enum SettingCellEvent: String {
@@ -141,6 +147,7 @@ public enum SettingCellEvent: String {
     case merchantCode
     case secretKey
     case jsonImport
+    case cardSecurityEntry
 }
 
 enum SettingSections: Int {

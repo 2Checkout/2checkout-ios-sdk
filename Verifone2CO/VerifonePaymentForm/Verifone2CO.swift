@@ -2,6 +2,8 @@
 //  Verifone2CO.swift
 //  Verifone2CO
 //
+//  Created by Oraz Atakishiyev on 16.01.2023.
+//
 
 import Foundation
 
@@ -50,8 +52,9 @@ extension Verifone2CO {
         public var allowedPaymentMethods: [PaymentMethodType] = [.creditCard]
         public var showCardSaveSwitch: Bool
         public var theme: Verifone2CO.Theme
+        public var cardSecureEntryType: SecureTextEtryType
 
-        public init(delegate: PaymentFlowSessionDelegate?, merchantCode: String, paymentPanelStoreTitle: String, totalAmount: String, allowedPaymentMethods: [PaymentMethodType], showCardSaveSwitch: Bool = true, theme: Verifone2CO.Theme = .defaultTheme) {
+        public init(delegate: PaymentFlowSessionDelegate?, merchantCode: String, paymentPanelStoreTitle: String, totalAmount: String, allowedPaymentMethods: [PaymentMethodType], showCardSaveSwitch: Bool = true, theme: Verifone2CO.Theme = .defaultTheme, cardSecureEntryType: SecureTextEtryType = .none) {
             self.delegate = delegate
             self.merchantCode = merchantCode
             self.paymentPanelStoreTitle = paymentPanelStoreTitle
@@ -59,6 +62,7 @@ extension Verifone2CO {
             self.allowedPaymentMethods = allowedPaymentMethods
             self.showCardSaveSwitch = showCardSaveSwitch
             self.theme = theme
+            self.cardSecureEntryType = cardSecureEntryType
         }
     }
 }

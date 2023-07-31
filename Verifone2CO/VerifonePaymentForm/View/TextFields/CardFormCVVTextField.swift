@@ -2,12 +2,19 @@
 //  CardFormCVVTextField.swift
 //  Verifone2CO
 //
+//  Created by Oraz Atakishiyev on 18.01.2023.
+//
 
 import UIKit
 
 public class CVVTextField: BaseTextField {
 
     // MARK: - Properties
+    var secureTextEntry: SecureTextEtryType = .none {
+        didSet {
+            self.isSecureTextEntry = secureTextEntry == .none ? false : true
+        }
+    }
     private let validLengths = 3...4
 
     @available(iOS, unavailable)

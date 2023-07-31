@@ -150,7 +150,8 @@ class MainVC: UIViewController {
             totalAmount: "\(price!) \(currency)",
             allowedPaymentMethods: allowedPaymentOptions,
             showCardSaveSwitch: MerchantAppConfig.shared.showCardSaveButton,
-            theme: verifon2coTheme)
+            theme: verifon2coTheme,
+            cardSecureEntryType: viewModel.cardSecureEntry)
         Verifone2CO.locale = MerchantAppConfig.shared.getLang()
         Verifone2COPaymentForm.present(with: paymentConfiguration, from: self)
     }

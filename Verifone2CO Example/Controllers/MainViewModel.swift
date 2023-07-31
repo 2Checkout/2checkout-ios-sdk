@@ -16,6 +16,10 @@ struct MainViewModel {
         return defaults.getCurrency(fromKey: Keys.currency)
     }
 
+    var cardSecureEntry: SecureTextEtryType {
+        return SecureTextEtryType(rawValue: defaults.string(forKey: Keys.cardSecureEntry) ?? "") ?? .none
+    }
+
     func isTestModeParamsOk() -> (String?, AppError?)? {
         if defaults.booleanValue(for: Keys.settingsBundleTestModeStatus) {
             if let urlString = defaults.getTestEnvFromSettingsBundle(fromKey: Keys.settingsBundleTestEnvUrl) {

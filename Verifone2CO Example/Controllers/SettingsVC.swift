@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Verifone2CO
 
 class SettingsVC: UIViewController {
     lazy var tableView: UITableView = {
@@ -85,6 +86,7 @@ class SettingsVC: UIViewController {
         self.tableView.register(TextLabelCell.self, forCellReuseIdentifier: TextLabelCell.description())
         self.tableView.register(TextFieldTableViewCell.self, forCellReuseIdentifier: TextFieldTableViewCell.description())
         self.tableView.register(ButtonTableViewCell.self, forCellReuseIdentifier: ButtonTableViewCell.description())
+        self.tableView.register(SegmentedControlTableViewCell.self, forCellReuseIdentifier: SegmentedControlTableViewCell.description())
         self.viewModel.onUpdate = { [unowned self] section in
             guard let section = section else {
                 return self.tableView.reloadData()
@@ -202,6 +204,14 @@ extension SettingsVC: UITableViewDataSource, UITableViewDelegate {
             cell?.textfield.text = item.value
             cell?.selectionStyle = .none
             return cell!
+        case .segmentedControl:
+            let cell: SegmentedControlTableViewCell = tableView.dequeueReusableCell(
+                withIdentifier: SegmentedControlTableViewCell.description(),
+                for: indexPath) as! SegmentedControlTableViewCell
+            cell.segmentedControlSecurityEntry.addTarget(self, action: #selector(cardSecureEntryChanged(sender:)), for: .valueChanged)
+            cell.titleLabel.text = item.placeholder
+            cell.segmentedControlSecurityEntry.selectedSegmentIndex = viewModel.cardSecureEntry.asInt()
+            return cell
         case .button:
             let cell = tableView.dequeueReusableCell(
                 withIdentifier: ButtonTableViewCell.description(),
@@ -225,7 +235,7 @@ extension SettingsVC: UITableViewDataSource, UITableViewDelegate {
             return 50.0
         case .button:
             return 55.0
-        case .paramTextfield:
+        case .paramTextfield, .segmentedControl:
             return 85.0
         }
     }
@@ -261,6 +271,11 @@ extension SettingsVC: UITableViewDataSource, UITableViewDelegate {
             popoverPresentationController.sourceRect = sender.bounds
         }
         self.present(importMenu, animated: true, completion: nil)
+    }
+
+    @objc func cardSecureEntryChanged(sender: UISegmentedControl) {
+        self.saveBarButton.isEnabled = true
+        self.viewModel.cardSecureEntry = SecureTextEtryType.asArray[sender.selectedSegmentIndex]
     }
 }
 

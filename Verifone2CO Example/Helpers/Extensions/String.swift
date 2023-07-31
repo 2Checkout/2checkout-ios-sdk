@@ -10,8 +10,8 @@ import CommonCrypto
 
 extension String {
     func hmac(key: String) -> String {
-        var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
-        CCHmac(CCHmacAlgorithm(kCCHmacAlgMD5), key, key.count, self, self.count, &digest)
+        var digest = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
+        CCHmac(CCHmacAlgorithm(kCCHmacAlgSHA256), key, key.count, self, self.count, &digest)
         let data = Data(digest)
         return data.map { String(format: "%02hhx", $0) }.joined()
     }

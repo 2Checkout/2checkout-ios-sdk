@@ -98,6 +98,7 @@
 		99783BA62970328000066599 /* PanContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B992970328000066599 /* PanContainerView.swift */; };
 		99783BA72970328000066599 /* DimmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783B9A2970328000066599 /* DimmedView.swift */; };
 		99783BAA2970351D00066599 /* PaymentTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99783BA92970351D00066599 /* PaymentTypeCell.swift */; };
+		997C19682A209D0000A89DE2 /* SegmentedControlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C19672A209D0000A89DE2 /* SegmentedControlTableViewCell.swift */; };
 		99A2D99D29E037BB00E02E15 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2D99C29E037BB00E02E15 /* SettingsViewModel.swift */; };
 		99D59BBE29642CD600C06BB8 /* Verifone2CO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99D59BB529642CD400C06BB8 /* Verifone2CO.framework */; };
 		99D59BC329642CD600C06BB8 /* Verifone2COTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D59BC229642CD600C06BB8 /* Verifone2COTests.swift */; };
@@ -263,6 +264,7 @@
 		99783B992970328000066599 /* PanContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanContainerView.swift; sourceTree = "<group>"; };
 		99783B9A2970328000066599 /* DimmedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimmedView.swift; sourceTree = "<group>"; };
 		99783BA92970351D00066599 /* PaymentTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTypeCell.swift; sourceTree = "<group>"; };
+		997C19672A209D0000A89DE2 /* SegmentedControlTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlTableViewCell.swift; sourceTree = "<group>"; };
 		99A2D99C29E037BB00E02E15 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		99D59BB529642CD400C06BB8 /* Verifone2CO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Verifone2CO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D59BB829642CD400C06BB8 /* Verifone2CO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Verifone2CO.h; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 			children = (
 				992C291C298D5CDC00E43DB2 /* TextfieldTableViewCell.swift */,
 				992C291D298D5CDC00E43DB2 /* TextareaTableViewCell.swift */,
+				997C19672A209D0000A89DE2 /* SegmentedControlTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -747,6 +750,7 @@
 				99D59BCE29642CF000C06BB8 /* Frameworks */,
 				99D59BCF29642CF000C06BB8 /* Resources */,
 				99783B862970313A00066599 /* Embed Frameworks */,
+				99294A24297AA30300B1DBDB /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -850,6 +854,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		99294A24297AA30300B1DBDB /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#export PATH=\"$PATH:/opt/homebrew/bin\"\n#if which swiftlint > /dev/null; then\n#  swiftlint\n#else\n#  echo \"warning: SwiftLint not installed, download from #https://github.com/realm/SwiftLint\"\n#fi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		99D59BB129642CD400C06BB8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -931,6 +958,7 @@
 				992C2918298D54B700E43DB2 /* String.swift in Sources */,
 				99783B75296EFCD700066599 /* UIColor.swift in Sources */,
 				992C2916298D30FB00E43DB2 /* UIButton.swift in Sources */,
+				997C19682A209D0000A89DE2 /* SegmentedControlTableViewCell.swift in Sources */,
 				99783B74296EFCD700066599 /* AppErrors.swift in Sources */,
 				992C290C298A9DAC00E43DB2 /* OrderResponse.swift in Sources */,
 				99783B76296EFCD700066599 /* Decodable.swift in Sources */,
@@ -1269,7 +1297,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 683U48NZTT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Verifone2CO Example/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1298,7 +1326,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 683U48NZTT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Verifone2CO Example/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
